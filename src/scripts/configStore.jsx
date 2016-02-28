@@ -3,9 +3,12 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 // import devTools from 'remote-redux-devtools';
 import thunk from 'redux-thunk';
 import * as reducers from './reducers/';
+import devTools from 'remote-redux-devtools';
 
 const enhancer = compose(
-    applyMiddleware(thunk)
+    applyMiddleware(thunk),
+    devTools()
+
     // devTools({
     //     name: Platform.OS,
     //     hostname: 'localhost',

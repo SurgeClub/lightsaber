@@ -1,1 +1,1 @@
-export bar from './bar';
+export events from './events';
